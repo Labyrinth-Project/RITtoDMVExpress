@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RIT to DMV Express | Rochester → Arundel Mills Mall Shuttle</title>
+  <meta name="description" content="Official landing page for the RIT to DMV Express — direct coach service from Rochester Institute of Technology to Arundel Mills Mall, MD. Reserve seats, check dates, and contact us." />
+  <style>
+    :root{
+      --rit-orange:#F76902;
+      --rit-gray:#7c8783;
+      --rit-black:#000000;
+      --radius:18px;
+      --shadow:0 10px 30px rgba(0,0,0,.45);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;background:var(--rit-black);color:var(--rit-gray);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1120px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;background:rgba(0,0,0,.85);border-bottom:2px solid var(--rit-orange);z-index:50}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px;color:var(--rit-orange)}
+    .brand .logo{width:40px;height:40px;border-radius:12px;background:var(--rit-orange);display:grid;place-items:center;box-shadow:var(--shadow);color:var(--rit-black);font-weight:900}
+    .nav a.btn{padding:10px 16px;border-radius:12px;border:1px solid var(--rit-gray)}
+    .nav a.btn.primary{background:var(--rit-orange);color:var(--rit-black);font-weight:800;border:none}
+    .hero{padding:32px 0;text-align:center}
+    .hero h1{color:var(--rit-orange);font-size:clamp(28px,4vw,48px);margin:12px 0}
+    .pill{display:inline-flex;gap:10px;align-items:center;padding:10px 14px;border-radius:999px;border:1px solid var(--rit-gray);background:rgba(124,135,131,.15);color:var(--rit-gray);font-weight:700}
+    .kpi{display:flex;justify-content:center;gap:20px;margin-top:20px}
+    .kpi .item{padding:10px 20px;border:1px solid var(--rit-gray);border-radius:14px;background:rgba(255,255,255,.02);text-align:center}
+    .kpi .big{font-size:22px;font-weight:800;color:var(--rit-orange)}
+    .section{padding:42px 0}
+    .section h2{color:var(--rit-orange)}
+    .card{background:rgba(255,255,255,.02);border:1px solid rgba(124,135,131,.35);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;margin-top:20px}
+    footer{padding:40px 0;text-align:center;color:var(--rit-gray);border-top:2px solid var(--rit-orange)}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:14px;font-weight:800;border:1px solid var(--rit-gray);background:transparent;color:var(--rit-gray)}
+    .btn.primary{background:var(--rit-orange);color:var(--rit-black)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#"><div class="logo">🚍</div>RIT to DMV Express</a>
+      <nav>
+        <a class="btn ghost" href="#payments">Payments</a>
+        <a class="btn ghost" href="#community">Community</a>
+        <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSed8JGK76Q9iXGwrlcKwOwWzAiydOE1pJaoZ6520QV6M7mcBQ/viewform?usp=header" >Reserve a Seat</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Rochester → Arundel Mills Mall (MD)</h1>
+      <div class="pill">🗓️ Nov 25, 12:00 PM → 6:00 PM (RIT → Arundel Mills) • Nov 30, 12:00 PM → 6:00 PM (Return)</div>
+      <p>Safe, affordable, and fast shuttle service for RIT students. Comfortable 56-passenger coach, professional driver, and convenient drop-off at Arundel Mills Mall.</p>
+      <div class="kpi">
+        <div class="item"><div class="big">$299</div><div>per seat</div></div>
+        <div class="item"><div class="big">56</div><div>total seats</div></div>
+        <div class="item"><div class="big">40</div><div>min. to run</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="reserve">
+    <div class="container">
+      <h2>Reserve a Seat</h2>
+      <p>Complete your reservation using our Google Form below:</p>
+      <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSed8JGK76Q9iXGwrlcKwOwWzAiydOE1pJaoZ6520QV6M7mcBQ/viewform?usp=header" target="_blank">Open Reservation Form</a>
+    </div>
+  </section>
+
+  <section class="section" id="payments">
+    <div class="container">
+      <h2>Pay Now with PayPal or Pay in 4</h2>
+      <p>Use the secure PayPal button below to complete your $299 reservation.</p>
+      <div class="card">
+        <script 
+          src="https://www.paypal.com/sdk/js?client-id=BAARNmYti6neLtE-ARZ9Tt-jngeT6puEEwRBHgVZEY5EBudFW72neBt8-3hfCDmrf2MPNlluLHGFErGD94&components=hosted-buttons&enable-funding=venmo&currency=USD">
+        </script>
+        <div id="paypal-container-EMCVSBPFP9BZC"></div>
+        <script>
+          paypal.HostedButtons({
+            hostedButtonId: "EMCVSBPFP9BZC",
+          }).render("#paypal-container-EMCVSBPFP9BZC")
+        </script>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Independent student travel service. Not affiliated with RIT or Arundel Mills Mall. © <span id="year"></span> All rights reserved.<br>
+    Contact us at: <a href="mailto:Labyrinth777@gmail.com">Labyrinth777@gmail.com</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
