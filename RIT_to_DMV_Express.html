@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RIT to DMV Express</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #222;
+    }
+    h1, h2 {
+      color: #f36c21;
+    }
+    section {
+      padding: 20px;
+    }
+    .hero-title img {
+      display: block;
+      margin: 0 auto;
+    }
+    /* Bus image */
+    .bus-logo img {
+      max-width: 400px;
+      width: 90%;
+      border-radius: 8px;
+      margin-top: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    /* RIT + DMV logos */
+    .rit-dmv-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      margin-top: 25px;
+    }
+    .rit-dmv-logos img {
+      max-height: 80px;
+      width: auto;
+      object-fit: contain;
+    }
+    /* Reservation button */
+    .reserve-btn {
+      display: inline-block;
+      background-color: #f36c21;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: background-color 0.2s ease;
+    }
+    .reserve-btn:hover {
+      background-color: #d85b1d;
+    }
+    /* Footer styling */
+    .footer-references a {
+      color: #0078d7;
+      text-decoration: none;
+    }
+    .footer-references a:hover {
+      text-decoration: underline;
+    }
+    /* Responsive layout */
+    @media (max-width: 600px) {
+      .rit-dmv-logos {
+        flex-direction: column;
+        gap: 16px;
+      }
+      .bus-logo img {
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO TITLE SECTION -->
+  <section class="hero-title" style="text-align:center; padding: 20px 0;">
+    <h1>RIT to DMV Express</h1>
+
+    <!-- Bus Image -->
+    <div class="bus-logo">
+      <img
+        src="https://www.price4limo.com/blog/charter-bus-rental-guide/charter-bus.jpeg"
+        alt="Charter Bus"
+        loading="lazy"
+      />
+    </div>
+
+    <!-- RIT + DMV Logos -->
+    <div class="rit-dmv-logos">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/en/thumb/4/48/RIT_Athletics_Logo.svg/1200px-RIT_Athletics_Logo.svg.png"
+        alt="RIT Tigers logo"
+        class="rit-logo"
+        loading="lazy"
+      />
+      <img
+        src="https://mocoshow.com/wp-content/uploads/2020/11/D162F690-524D-44AD-91A2-94878EECB143.jpeg"
+        alt="DMV logo"
+        class="dmv-logo"
+        loading="lazy"
+      />
+    </div>
+  </section>
+
+  <!-- RESERVATION BUTTON SECTION -->
+  <section class="reservation-section" style="text-align:center; margin-top:40px;">
+    <h2>Reserve Your Seat Today</h2>
+    <p>Price per seat: <strong>$299.00</strong></p>
+
+    <!-- Google Form Reservation Button -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSed8JGK76Q9iXGwrlcKwOwWzAiydOE1pJaoZ6520QV6M7mcBQ/viewform?usp=header" 
+      target="_blank" 
+      class="reserve-btn">
+      Reserve Seat
+    </a>
+  </section>
+
+  <!-- PAYPAL PAYMENT SECTION (further down) -->
+  <section class="paypal-section" style="text-align:center; margin-top:40px;">
+    <h2>Secure Your Seat via PayPal</h2>
+    <script 
+      src="https://www.paypal.com/sdk/js?client-id=BAARNmYti6neLtE-ARZ9Tt-jngeT6puEEwRBHgVZEY5EBudFW72neBt8-3hfCDmrf2MPNlluLHGFErGD94&components=hosted-buttons&enable-funding=venmo&currency=USD">
+    </script>
+    <div id="paypal-container-EMCVSBPFP9BZC"></div>
+    <script>
+      paypal.HostedButtons({
+        hostedButtonId: "EMCVSBPFP9BZC"
+      }).render("#paypal-container-EMCVSBPFP9BZC");
+    </script>
+  </section>
+
+  <!-- CONTACT INFO -->
+  <section class="contact-section" style="text-align:center; margin-top:40px;">
+    <p>For assistance or questions, please email:
+      <a href="mailto:Labyrinth777@gmail.com">Labyrinth777@gmail.com</a>
+    </p>
+  </section>
+
+  <!-- FOOTER REFERENCES -->
+  <footer class="footer-references" style="text-align:center; padding: 20px 0; font-size: 0.9em; color: #555;">
+    <p><strong>Image & Organization References:</strong></p>
+    <p>
+      Charter Bus image courtesy of Price4Limo 
+      (<a href="https://www.price4limo.com/blog/charter-bus-rental-guide/" target="_blank" rel="noopener">price4limo.com</a>)<br />
+      RIT Tigers logo courtesy of Rochester Institute of Technology 
+      (<a href="https://www.rit.edu" target="_blank" rel="noopener">rit.edu</a>)<br />
+      DMV logo courtesy of MoCo Show / Maryland Motor Vehicle Administration 
+      (<a href="https://mocoshow.com" target="_blank" rel="noopener">mocoshow.com</a>)
+    </p>
+  </footer>
+
+</body>
+</html>
