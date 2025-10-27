@@ -5,31 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RIT to DMV Express</title>
   <style>
+    /* ---------- GLOBAL STYLES ---------- */
     body {
       font-family: Arial, Helvetica, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #fff;
-      color: #222;
+      background-color: #000; /* Black background */
+      color: #fff; /* White text */
+      text-align: center;
     }
+
     h1, h2 {
-      color: #f36c21;
+      color: #f36c21; /* RIT orange */
     }
+
     section {
       padding: 20px;
     }
+
+    a {
+      color: #f36c21;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ---------- HERO SECTION ---------- */
     .hero-title img {
       display: block;
       margin: 0 auto;
     }
+
     /* Bus image */
     .bus-logo img {
       max-width: 400px;
       width: 90%;
       border-radius: 8px;
       margin-top: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 20px rgba(243,108,33,0.4);
     }
+
     /* RIT + DMV logos */
     .rit-dmv-logos {
       display: flex;
@@ -38,12 +55,15 @@
       gap: 40px;
       margin-top: 25px;
     }
+
     .rit-dmv-logos img {
       max-height: 80px;
       width: auto;
       object-fit: contain;
+      filter: brightness(0) invert(1); /* makes logos visible on black bg */
     }
-    /* Reservation button */
+
+    /* ---------- BUTTONS ---------- */
     .reserve-btn {
       display: inline-block;
       background-color: #f36c21;
@@ -54,19 +74,37 @@
       font-weight: bold;
       font-size: 1.1em;
       transition: background-color 0.2s ease;
+      margin-top: 10px;
     }
+
     .reserve-btn:hover {
       background-color: #d85b1d;
     }
-    /* Footer styling */
-    .footer-references a {
-      color: #0078d7;
-      text-decoration: none;
+
+    /* ---------- PAYPAL SECTION ---------- */
+    .paypal-section {
+      margin-top: 40px;
     }
-    .footer-references a:hover {
-      text-decoration: underline;
+
+    .paypal-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
     }
-    /* Responsive layout */
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      padding: 30px 10px;
+      font-size: 0.9em;
+      color: #bbb;
+      border-top: 1px solid #333;
+    }
+
+    footer a {
+      color: #f36c21;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
     @media (max-width: 600px) {
       .rit-dmv-logos {
         flex-direction: column;
@@ -81,7 +119,7 @@
 <body>
 
   <!-- HERO TITLE SECTION -->
-  <section class="hero-title" style="text-align:center; padding: 20px 0;">
+  <section class="hero-title">
     <h1>RIT to DMV Express</h1>
 
     <!-- Bus Image -->
@@ -111,7 +149,7 @@
   </section>
 
   <!-- RESERVATION BUTTON SECTION -->
-  <section class="reservation-section" style="text-align:center; margin-top:40px;">
+  <section class="reservation-section">
     <h2>Reserve Your Seat Today</h2>
     <p>Price per seat: <strong>$299.00</strong></p>
 
@@ -123,29 +161,31 @@
     </a>
   </section>
 
-  <!-- PAYPAL PAYMENT SECTION (further down) -->
-  <section class="paypal-section" style="text-align:center; margin-top:40px;">
+  <!-- PAYPAL PAYMENT SECTION -->
+  <section class="paypal-section">
     <h2>Secure Your Seat via PayPal</h2>
-    <script 
-      src="https://www.paypal.com/sdk/js?client-id=BAARNmYti6neLtE-ARZ9Tt-jngeT6puEEwRBHgVZEY5EBudFW72neBt8-3hfCDmrf2MPNlluLHGFErGD94&components=hosted-buttons&enable-funding=venmo&currency=USD">
-    </script>
-    <div id="paypal-container-EMCVSBPFP9BZC"></div>
-    <script>
-      paypal.HostedButtons({
-        hostedButtonId: "EMCVSBPFP9BZC"
-      }).render("#paypal-container-EMCVSBPFP9BZC");
-    </script>
+    <div class="paypal-container">
+      <script 
+        src="https://www.paypal.com/sdk/js?client-id=BAARNmYti6neLtE-ARZ9Tt-jngeT6puEEwRBHgVZEY5EBudFW72neBt8-3hfCDmrf2MPNlluLHGFErGD94&components=hosted-buttons&enable-funding=venmo&currency=USD">
+      </script>
+      <div id="paypal-container-EMCVSBPFP9BZC"></div>
+      <script>
+        paypal.HostedButtons({
+          hostedButtonId: "EMCVSBPFP9BZC"
+        }).render("#paypal-container-EMCVSBPFP9BZC");
+      </script>
+    </div>
   </section>
 
   <!-- CONTACT INFO -->
-  <section class="contact-section" style="text-align:center; margin-top:40px;">
+  <section class="contact-section">
     <p>For assistance or questions, please email:
       <a href="mailto:Labyrinth777@gmail.com">Labyrinth777@gmail.com</a>
     </p>
   </section>
 
   <!-- FOOTER REFERENCES -->
-  <footer class="footer-references" style="text-align:center; padding: 20px 0; font-size: 0.9em; color: #555;">
+  <footer class="footer-references">
     <p><strong>Image & Organization References:</strong></p>
     <p>
       Charter Bus image courtesy of Price4Limo 
