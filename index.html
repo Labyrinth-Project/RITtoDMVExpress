@@ -5,11 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>RIT to DMV Express | Rochester → Arundel Mills Mall Shuttle</title>
   <meta name="description" content="Official landing page for the RIT to DMV Express — direct coach service from Rochester Institute of Technology to Arundel Mills Mall, MD. Reserve seats, check dates, and contact us." />
-  <div style="text-align:center; margin-top:20px;">
-  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/48/RIT_Athletics_Logo.svg/1200px-RIT_Athletics_Logo.svg.png" 
-       alt="RIT Tigers Logo" 
-       style="height:80px;">
-</div>
   <style>
     :root{
       --rit-orange:#F76902;
@@ -19,27 +14,48 @@
       --shadow:0 10px 30px rgba(0,0,0,.45);
     }
     *{box-sizing:border-box}
-    html,body{margin:0;height:100%;background:var(--rit-black);color:var(--rit-gray);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    html,body{margin:0;height:100%;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
     a{color:inherit;text-decoration:none}
-    .container{max-width:1120px;margin:0 auto;padding:0 20px}
-    header{position:sticky;top:0;background:rgba(0,0,0,.85);border-bottom:2px solid var(--rit-orange);z-index:50}
+
+    /* Background image */
+    body{
+      color:var(--rit-gray);
+      background-color:#000;
+      background-image: url('https://raw.githubusercontent.com/Labyrinth-Project/RITtoDMVExpress/main/christmas-tree-dark-space-left.jpg');
+      background-position: right center;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    body::before{
+      content:""; position:fixed; inset:0; z-index:0;
+      background: radial-gradient(70% 70% at 70% 50%, rgba(0,0,0,.3) 0%, rgba(0,0,0,.75) 70%, rgba(0,0,0,.9) 100%);
+      pointer-events:none;
+    }
+
+    .container{max-width:1120px;margin:0 auto;padding:0 20px;position:relative;z-index:1}
+    header{position:sticky;top:0;background:rgba(0,0,0,.85);backdrop-filter:blur(5px);border-bottom:2px solid var(--rit-orange);z-index:10}
     .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
     .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px;color:var(--rit-orange)}
     .brand .logo{width:40px;height:40px;border-radius:12px;background:var(--rit-orange);display:grid;place-items:center;box-shadow:var(--shadow);color:var(--rit-black);font-weight:900}
     .nav a.btn{padding:10px 16px;border-radius:12px;border:1px solid var(--rit-gray)}
     .nav a.btn.primary{background:var(--rit-orange);color:var(--rit-black);font-weight:800;border:none}
+
     .hero{padding:32px 0;text-align:center}
     .hero h1{color:var(--rit-orange);font-size:clamp(28px,4vw,48px);margin:12px 0}
-    .pill{display:inline-flex;gap:10px;align-items:center;padding:10px 14px;border-radius:999px;border:1px solid var(--rit-gray);background:rgba(124,135,131,.15);color:var(--rit-gray);font-weight:700}
-    .kpi{display:flex;justify-content:center;gap:20px;margin-top:20px}
-    .kpi .item{padding:10px 20px;border:1px solid var(--rit-gray);border-radius:14px;background:rgba(255,255,255,.02);text-align:center}
+    .pill{display:inline-flex;gap:10px;align-items:center;padding:10px 14px;border-radius:999px;border:1px solid var(--rit-gray);background:rgba(0,0,0,.45);color:#e7eae8;font-weight:700}
+    .kpi{display:flex;justify-content:center;gap:20px;margin-top:20px;flex-wrap:wrap}
+    .kpi .item{padding:10px 20px;border:1px solid rgba(124,135,131,.6);border-radius:14px;background:rgba(0,0,0,.45);text-align:center}
     .kpi .big{font-size:22px;font-weight:800;color:var(--rit-orange)}
+
     .section{padding:42px 0}
     .section h2{color:var(--rit-orange)}
-    .card{background:rgba(255,255,255,.02);border:1px solid rgba(124,135,131,.35);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;margin-top:20px}
-    footer{padding:40px 0;text-align:center;color:var(--rit-gray);border-top:2px solid var(--rit-orange)}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:14px;font-weight:800;border:1px solid var(--rit-gray);background:transparent;color:var(--rit-gray)}
+    .card{background:rgba(0,0,0,.5);border:1px solid rgba(124,135,131,.5);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;margin-top:20px}
+
+    footer{padding:40px 0;text-align:center;color:#cfd4d2;border-top:2px solid var(--rit-orange);background:rgba(0,0,0,.75)}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:14px;font-weight:800;border:1px solid var(--rit-gray);background:rgba(0,0,0,.4);color:#e7eae8}
     .btn.primary{background:var(--rit-orange);color:var(--rit-black)}
+    .logo-center{display:block;margin:18px auto 0 auto;height:80px}
+    iframe{max-width:100%;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.4)}
   </style>
 </head>
 <body>
@@ -56,6 +72,7 @@
 
   <section class="hero">
     <div class="container">
+      <img class="logo-center" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/48/RIT_Athletics_Logo.svg/1200px-RIT_Athletics_Logo.svg.png" alt="RIT Tigers Logo">
       <h1>Rochester → Arundel Mills Mall (MD)</h1>
       <div class="pill">🗓️ Dec 20, 12:00 PM → 6:00 PM (RIT → Arundel Mills) • Jan 9, 12:00 PM → 6:00 PM (Return)</div>
       <p>Safe, affordable, and fast shuttle service for RIT students. Comfortable 56-passenger coach, professional driver, and convenient drop-off at Arundel Mills Mall.</p>
@@ -64,8 +81,9 @@
         <div class="item"><div class="big">55</div><div>total seats</div></div>
         <div class="item"><div class="big">40</div><div>min. to run</div></div>
       </div>
-       <div style='text-align:center; margin-top:40px;'>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/pc2tA3IKM1c?si=oFckNMOGIkD5jeWN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style='max-width:100%; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,.4);'></iframe>
+      <div style='text-align:center; margin-top:40px;'>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/pc2tA3IKM1c?si=oFckNMOGIkD5jeWN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </div>
   </section>
 
@@ -95,59 +113,6 @@
     </div>
   </section>
 
-  <section class="section" id="social">
-    <div class="container" style="text-align:center">
-      <h2 style="color:var(--rit-orange);margin-bottom:8px">Follow Us</h2>
-      <p style="margin-top:0;margin-bottom:20px;font-size:14px;color:var(--rit-gray)">Stay connected for updates, travel alerts, and future trips.</p>
-      <div style="display:flex;justify-content:center;gap:18px;flex-wrap:wrap">
-        <!-- YouTube -->
-        <a href="https://youtu.be/pc2tA3IKM1c?si=CLHdUUAbdZWnwSrj" target="_blank" aria-label="YouTube" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:#FF0000;box-shadow:0 4px 10px rgba(0,0,0,.5);transition:transform .15s ease,box-shadow .15s ease;">
-          <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M22.54 6.42c-.25-.94-.99-1.68-1.93-1.93C18.88 4 12 4 12 4s-6.88 0-8.61.49c-.94.25-1.68.99-1.93 1.93C1 8.15 1 12 1 12s0 3.85.46 5.58c.25.94.99 1.68 1.93 1.93C5.12 20 12 20 12 20s6.88 0 8.61-.49c.94-.25 1.68-.99 1.93-1.93C23 15.85 23 12 23 12s0-3.85-.46-5.58Z" fill="#fff"/>
-            <path d="M10 15.5 15.5 12 10 8.5v7Z" fill="#FF0000"/>
-          </svg>
-        </a>
-        <!-- Instagram -->
-        <a href="https://www.instagram.com/labyrinthproject777/" target="_blank" aria-label="Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:14px;background:radial-gradient(circle at 30% 30%, #fdf497 0, #fd5949 35%, #d6249f 60%, #285AEB 100%);box-shadow:0 4px 10px rgba(0,0,0,.5);transition:transform .15s ease,box-shadow .15s ease;">
-          <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none">
-            <rect x="3" y="3" width="18" height="18" rx="5" stroke="#fff" stroke-width="1.7"/>
-            <circle cx="12" cy="12" r="4" stroke="#fff" stroke-width="1.7"/>
-            <circle cx="17" cy="7" r="1.1" fill="#fff"/>
-          </svg>
-        </a>
-        <!-- Facebook -->
-        <a href="https://www.facebook.com/profile.php?id=61582919321161" target="_blank" aria-label="Facebook" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:#1877F2;box-shadow:0 4px 10px rgba(0,0,0,.5);transition:transform .15s ease,box-shadow .15s ease;">
-          <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none">
-            <path d="M13.5 21v-7h2.3l.4-3h-2.7V8.6c0-.9.3-1.5 1.6-1.5H16V4.4C15.7 4.4 14.9 4.3 14 4.3 11.7 4.3 10.1 5.7 10.1 8.3V11H8v3h2.1v7h3.4Z" fill="#fff"/>
-          </svg>
-        </a>
-        <!-- TikTok -->
-        <a href="https://www.tiktok.com/@labyrinthproject777" target="_blank" aria-label="TikTok" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:#000000;box-shadow:0 4px 10px rgba(0,0,0,.5);transition:transform .15s ease,box-shadow .15s ease;">
-          <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none">
-            <path d="M17.5 8.1c-1.2-.5-2.1-1.5-2.5-2.7V5h-2.4v9.1c0 1.2-1 2.2-2.2 2.2-1.2 0-2.2-1-2.2-2.2s1-2.2 2.2-2.2c.2 0 .5 0 .7.1V9.6c-.3-.1-.5-.1-.8-.1-2.5 0-4.6 2-4.6 4.6s2 4.6 4.6 4.6 4.6-2 4.6-4.6V10c.7.7 1.6 1.2 2.6 1.3V8.8c-.4 0-.8-.1-1.2-.3Z" fill="#fff"/>
-          </svg>
-        </a>
-        <!-- Discord -->
-        <a href="https://discord.gg/YJP4vbHq" target="_blank" aria-label="Discord" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:16px;background:#5865F2;box-shadow:0 4px 10px rgba(0,0,0,.5);transition:transform .15s ease,box-shadow .15s ease;">
-          <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M17.3 6.1A9.2 9.2 0 0 0 14.7 5l-.3.6a8.3 8.3 0 0 0-2.8 0L11.3 5a9.2 9.2 0 0 0-2.6 1.1C6.3 9 5.5 12 5.7 15.1c1.1.8 2.2 1.3 3.3 1.6l.7-1.2c-.4-.1-.8-.3-1.2-.5l.3-.2c2.3 1.1 4.8 1.1 7.1 0l.3.2c-.4.2-.8.4-1.2.5l.7 1.2c1.1-.3 2.2-.8 3.3-1.6.2-3.2-.6-6.2-3.1-9ZM10.1 13.6c-.7 0-1.3-.6-1.3-1.4s.6-1.4 1.3-1.4c.7 0 1.3.6 1.3 1.4s-.5 1.4-1.3 1.4Zm3.8 0c-.7 0-1.3-.6-1.3-1.4s.6-1.4 1.3-1.4c.7 0 1.3.6 1.3 1.4s-.6 1.4-1.3 1.4Z" fill="#fff"/>
-          </svg>
-        </a>
-        <!-- Reddit -->
-        <a href="https://www.reddit.com/u/Labyrinthproject777/s/3EjT1Wv18Y" target="_blank" aria-label="Reddit" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:#FF4500;box-shadow:0 4px 10px rgba(0,0,0,.5);transition:transform .15s ease,box-shadow .15s ease;">
-          <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="9" fill="#fff"/>
-            <circle cx="9" cy="12" r="1.1" fill="#FF4500"/>
-            <circle cx="15" cy="12" r="1.1" fill="#FF4500"/>
-            <path d="M9.5 14.6c.6.6 1.5.9 2.5.9s1.9-.3 2.5-.9" stroke="#FF4500" stroke-width="1.3" stroke-linecap="round"/>
-            <circle cx="17.5" cy="9" r="1.1" fill="#FF4500"/>
-            <path d="M14.3 8.6 14.8 6l2.4.5" stroke="#FF4500" stroke-width="1.3" stroke-linecap="round"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </section>
-  
   <footer>
     <p>Independent student travel service. Not affiliated with RIT or Arundel Mills Mall. © <span id="year"></span> All rights reserved.<br>
     Contact us at: <a href="mailto:labyrinthproject777@gmail.com">labyrinthproject777@gmail.com</a></p>
